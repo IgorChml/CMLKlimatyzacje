@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   ],
 }
 
-function estimateReadingTime(content: unknown): number {
-  const text = JSON.stringify(content ?? '')
-  const words = text.split(/\s+/).length
-  return Math.max(1, Math.ceil(words / 200))
+function estimateReadingTime(excerpt: string): number {
+  const words = excerpt.trim().split(/\s+/).length
+  // excerpt is ~10% of full post; extrapolate to a realistic estimate
+  return Math.max(1, Math.ceil((words * 10) / 200))
 }
 
 const categoryLabels: Record<string, string> = {
@@ -105,7 +105,7 @@ export default async function BlogPage() {
                   excerpt={post.entry.excerpt ?? ''}
                   publishedAt={post.entry.publishedAt ?? new Date().toISOString()}
                   category={post.entry.category}
-                  readingTime={estimateReadingTime(post.entry.content)}
+                  readingTime={estimateReadingTime(post.entry.excerpt ?? '')}
                 />
               ))}
             </div>
