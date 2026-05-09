@@ -64,7 +64,7 @@ export default function OdgrzybianieKlimatyzacjiPage() {
       <HeroSection
         title="Odgrzybianie i dezynfekcja klimatyzacji"
         subtitle="Eliminujemy pleśnie, grzyby i bakterie z Twojego klimatyzatora. Zadbaj o zdrowe powietrze w domu i biurze. Szybki zabieg, trwałe rezultaty."
-        primaryCta={{ label: 'Zamów odgrzybianie: 507 000 000', href: 'tel:507000000' }}
+        primaryCta={{ label: 'Zamów odgrzybianie: 691 959 013', href: 'tel:691959013' }}
       />
 
       <section className="py-16 bg-gray-bg">

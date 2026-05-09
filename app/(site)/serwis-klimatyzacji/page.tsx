@@ -73,7 +73,7 @@ export default function SerwisKlimatyzacjiPage() {
       <HeroSection
         title="Serwis klimatyzacji – szybko i rzetelnie"
         subtitle="Przeglądy, naprawy i czyszczenie klimatyzatorów w Luboniu, Poznaniu i całej Wielkopolsce. Protokoły serwisowe, gwarancja na naprawy, doświadczeni technicy."
-        primaryCta={{ label: 'Umów serwis: 507 000 000', href: 'tel:507000000' }}
+        primaryCta={{ label: 'Umów serwis: 691 959 013', href: 'tel:691959013' }}
       />
 
       <section className="py-16 bg-gray-bg">

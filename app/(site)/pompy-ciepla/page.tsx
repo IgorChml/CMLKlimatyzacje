@@ -70,7 +70,7 @@ export default function PompyCieplaPage() {
         badge="Dofinansowanie Czyste Powietrze"
         title="Pompy ciepła – ekologiczne ogrzewanie Twojego domu"
         subtitle="Montujemy i serwisujemy pompy ciepła powietrze-woda. Pomożemy w uzyskaniu dofinansowania z programu Czyste Powietrze. Oszczędzaj na ogrzewaniu do 75%."
-        primaryCta={{ label: 'Zapytaj o wycenę: 507 000 000', href: 'tel:507000000' }}
+        primaryCta={{ label: 'Zapytaj o wycenę: 691 959 013', href: 'tel:691959013' }}
         secondaryCta={{ label: 'Dowiedz się więcej', href: '/oferta' }}
       />
 

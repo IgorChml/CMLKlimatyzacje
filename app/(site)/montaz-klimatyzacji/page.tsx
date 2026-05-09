@@ -70,7 +70,7 @@ export default function MontazKlimatyzacjiPage() {
       <HeroSection
         title="Montaż klimatyzacji – szybko i profesjonalnie"
         subtitle="Certyfikowani technicy F-GAZ przeprowadzą instalację klimatyzacji w Twoim domu, mieszkaniu lub biurze. Montaż w 1 dzień, 5-letnia gwarancja."
-        primaryCta={{ label: 'Zamów montaż: 507 000 000', href: 'tel:507000000' }}
+        primaryCta={{ label: 'Zamów montaż: 691 959 013', href: 'tel:691959013' }}
         secondaryCta={{ label: 'Sprawdź cennik', href: '/oferta' }}
       />
 

@@ -69,7 +69,7 @@ export default function KlimatyzacjaPage() {
       <HeroSection
         title="Klimatyzacja do domu i biura"
         subtitle="Dobieramy i sprzedajemy klimatyzatory renomowanych marek. Pomagamy wybrać optymalne urządzenie dopasowane do Twoich potrzeb i budżetu."
-        primaryCta={{ label: 'Zapytaj o wycenę', href: 'tel:507000000' }}
+        primaryCta={{ label: 'Zapytaj o wycenę', href: 'tel:691959013' }}
         secondaryCta={{ label: 'Montaż klimatyzacji', href: '/montaz-klimatyzacji' }}
       />
 

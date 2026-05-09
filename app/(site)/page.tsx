@@ -105,7 +105,7 @@ export default function HomePage() {
         badge="Nr 1 w Luboniu i okolicach"
         title="Klimatyzacja i pompy ciepła dla Twojego domu"
         subtitle="Profesjonalny montaż, serwis i odgrzybianie klimatyzacji. Obsługujemy Luboń, Poznań i całą Wielkopolskę. Szybka wycena – odpowiadamy w ciągu 24h."
-        primaryCta={{ label: 'Zadzwoń: 507 000 000', href: 'tel:507000000' }}
+        primaryCta={{ label: 'Zadzwoń: 691 959 013', href: 'tel:691959013' }}
         secondaryCta={{ label: 'Sprawdź ofertę', href: '/oferta' }}
       />
 
@@ -153,7 +153,7 @@ export default function HomePage() {
             Zadzwoń do nas lub napisz – bezpłatna wycena montażu klimatyzacji w ciągu 24h.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:507000000" className="btn-primary">
+            <a href="tel:691959013" className="btn-primary">
               📞 Zadzwoń teraz
             </a>
             <Link href="/kontakt" className="btn-outline border-white text-white hover:bg-white hover:text-navy">

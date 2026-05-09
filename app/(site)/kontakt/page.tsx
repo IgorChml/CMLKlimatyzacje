@@ -46,8 +46,9 @@ export default function KontaktPage() {
                     <div>
                       <p className="font-semibold text-navy">Adres</p>
                       <p className="text-gray-600 text-sm">
-                        ul. Przykładowa 1<br />
-                        62-030 Luboń<br />
+                        CML Klimatyzacje<br />
+                        ul. Nowiny 5<br />
+                        Luboń, 62-030<br />
                         woj. Wielkopolskie
                       </p>
                     </div>
@@ -58,10 +59,10 @@ export default function KontaktPage() {
                     <div>
                       <p className="font-semibold text-navy">Telefon</p>
                       <a
-                        href="tel:507000000"
+                        href="tel:691959013"
                         className="text-sky font-semibold text-lg hover:text-orange transition-colors"
                       >
-                        507 000 000
+                        691 959 013
                       </a>
                       <p className="text-gray-500 text-xs mt-1">Połączenia i SMS</p>
                     </div>
@@ -131,10 +132,10 @@ export default function KontaktPage() {
                   <p className="font-semibold text-lg text-gray-500">Mapa dojazdu</p>
                   <p className="text-sm mt-2">
                     CML Klimatyzacje<br />
-                    ul. Przykładowa 1, 62-030 Luboń
+                    ul. Nowiny 5, Luboń 62-030
                   </p>
                   <a
-                    href="https://maps.google.com/?q=Luboń,Wielkopolska"
+                    href="https://maps.google.com/?q=ul.+Nowiny+5,+62-030+Luboń"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 inline-block btn-secondary text-sm"
@@ -147,7 +148,7 @@ export default function KontaktPage() {
               <div className="card bg-navy text-white">
                 <p className="font-semibold text-lg mb-2">⚡ Szybka wycena</p>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Zadzwoń na <strong className="text-sky">507 000 000</strong> lub napisz na{' '}
+                  Zadzwoń na <strong className="text-sky">691 959 013</strong> lub napisz na{' '}
                   <strong className="text-sky">biuro@cmlklimatyzacje.pl</strong> – wycenę
                   przesyłamy w ciągu 24 godzin roboczych.
                 </p>
