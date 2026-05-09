@@ -89,3 +89,6 @@ content/blog/           # Keystatic blog posts (.mdoc files)
 keystatic.config.ts     # CMS schema configuration
 next-sitemap.config.js  # Sitemap generation config
 ```
+# CMLKlimatyzacje
+# cml-klimatyzacje-next
+# cml-klimatyzacje-next
