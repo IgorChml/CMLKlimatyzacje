@@ -31,10 +31,10 @@ export default function Footer() {
               pomp ciepła w Luboniu, Poznaniu i całej Wielkopolsce.
             </p>
             <a
-              href="tel:507000000"
+              href="tel:691959013"
               className="text-sky font-semibold text-lg hover:text-white transition-colors"
             >
-              📞 507 000 000
+              📞 691 959 013
             </a>
           </div>
 
@@ -79,8 +79,8 @@ export default function Footer() {
               <p>📍 Luboń, Wielkopolska</p>
               <p>
                 📞{' '}
-                <a href="tel:507000000" className="hover:text-sky transition-colors">
-                  507 000 000
+                <a href="tel:691959013" className="hover:text-sky transition-colors">
+                  691 959 013
                 </a>
               </p>
               <p>

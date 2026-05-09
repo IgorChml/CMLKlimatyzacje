@@ -126,7 +126,7 @@ export default function RealizacjePage() {
           <p className="text-gray-600 mb-8">
             Skontaktuj się z nami – bezpłatna wycena i konsultacja bez zobowiązań.
           </p>
-          <a href="tel:507000000" className="btn-primary">📞 Zadzwoń: 507 000 000</a>
+          <a href="tel:691959013" className="btn-primary">📞 Zadzwoń: 691 959 013</a>
         </div>
       </section>
     </>

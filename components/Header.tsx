@@ -83,8 +83,8 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:507000000" className="btn-primary text-sm py-2 px-4">
-              📞 507 000 000
+            <a href="tel:691959013" className="btn-primary text-sm py-2 px-4">
+              📞 691 959 013
             </a>
           </div>
 
@@ -151,8 +151,8 @@ export default function Header() {
               </Link>
             ))}
 
-            <a href="tel:507000000" className="mt-2 btn-primary text-sm text-center">
-              📞 507 000 000
+            <a href="tel:691959013" className="mt-2 btn-primary text-sm text-center">
+              📞 691 959 013
             </a>
           </nav>
         </div>

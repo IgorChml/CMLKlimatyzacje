@@ -179,8 +179,8 @@ export default async function BlogPostPage({
               <p className="text-gray-300 text-sm mb-4">
                 Zadzwoń do nas – bezpłatna wycena i szybka realizacja.
               </p>
-              <a href="tel:507000000" className="btn-primary w-full text-center justify-center">
-                📞 507 000 000
+              <a href="tel:691959013" className="btn-primary w-full text-center justify-center">
+                📞 691 959 013
               </a>
               <Link
                 href="/kontakt"

@@ -77,7 +77,7 @@ export default function OfertaPage() {
       <HeroSection
         title="Nasza oferta – kompleksowa obsługa klimatyzacji"
         subtitle="Od doboru urządzenia, przez montaż, po serwis i odgrzybianie. Realizujemy projekty dla domów, mieszkań, biur i zakładów przemysłowych."
-        primaryCta={{ label: 'Zadzwoń po wycenę', href: 'tel:507000000' }}
+        primaryCta={{ label: 'Zadzwoń po wycenę', href: 'tel:691959013' }}
       />
 
       <section className="py-16 bg-gray-bg">
@@ -117,7 +117,7 @@ export default function OfertaPage() {
             Zadzwoń lub napisz – odpowiemy w ciągu 24 godzin i przygotujemy indywidualną ofertę.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:507000000" className="btn-primary">📞 507 000 000</a>
+            <a href="tel:691959013" className="btn-primary">📞 691 959 013</a>
             <Link href="/kontakt" className="btn-outline border-white text-white hover:bg-white hover:text-navy">
               Dane kontaktowe
             </Link>
