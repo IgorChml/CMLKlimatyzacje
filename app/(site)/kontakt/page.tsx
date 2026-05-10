@@ -73,10 +73,10 @@ export default function KontaktPage() {
                     <div>
                       <p className="font-semibold text-navy">E-mail</p>
                       <a
-                        href="mailto:biuro@cmlklimatyzacje.pl"
+                        href="mailto:kontakt@cmlklimatyzacje.pl"
                         className="text-sky hover:text-orange transition-colors text-sm"
                       >
-                        biuro@cmlklimatyzacje.pl
+                        kontakt@cmlklimatyzacje.pl
                       </a>
                     </div>
                   </div>
@@ -119,37 +119,26 @@ export default function KontaktPage() {
               </div>
             </div>
 
-            {/* Map placeholder */}
+            {/* Google Maps embed */}
             <div className="flex flex-col gap-4">
-              <div
-                className="w-full rounded-2xl overflow-hidden bg-gray-bg border border-gray-200 flex items-center justify-center"
-                style={{ minHeight: '400px' }}
-                aria-label="Lokalizacja CML Klimatyzacje na mapie"
-                role="img"
-              >
-                <div className="text-center text-gray-400 p-8">
-                  <div className="text-6xl mb-4">🗺️</div>
-                  <p className="font-semibold text-lg text-gray-500">Mapa dojazdu</p>
-                  <p className="text-sm mt-2">
-                    CML Klimatyzacje<br />
-                    ul. Nowiny 5, Luboń 62-030
-                  </p>
-                  <a
-                    href="https://maps.google.com/?q=ul.+Nowiny+5,+62-030+Luboń"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block btn-secondary text-sm"
-                  >
-                    Otwórz w Google Maps
-                  </a>
-                </div>
+              <div className="w-full h-full min-h-[400px] rounded-2xl overflow-hidden">
+                <iframe
+                  src="https://maps.google.com/maps?width=100%25&height=400&hl=pl&q=CML+Klimatyzacje%2C+ul.+Nowiny+5%2C+Lub%C3%B3n&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: '400px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokalizacja CML Klimatyzacje — ul. Nowiny 5, Luboń 62-030"
+                />
               </div>
 
               <div className="card bg-navy text-white">
                 <p className="font-semibold text-lg mb-2">⚡ Szybka wycena</p>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Zadzwoń na <strong className="text-sky">691 959 013</strong> lub napisz na{' '}
-                  <strong className="text-sky">biuro@cmlklimatyzacje.pl</strong> – wycenę
+                  <strong className="text-sky">kontakt@cmlklimatyzacje.pl</strong> – wycenę
                   przesyłamy w ciągu 24 godzin roboczych.
                 </p>
               </div>
