@@ -30,7 +30,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       />
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-1">{children}</main>
+        {/* pb-16 on mobile makes room for the fixed bottom call bar */}
+        <main className="flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />
       </div>
     </>
