@@ -85,8 +85,8 @@ export default function Footer() {
               </p>
               <p>
                 ✉️{' '}
-                <a href="mailto:biuro@cmlklimatyzacje.pl" className="hover:text-sky transition-colors">
-                  biuro@cmlklimatyzacje.pl
+                <a href="mailto:kontakt@cmlklimatyzacje.pl" className="hover:text-sky transition-colors">
+                  kontakt@cmlklimatyzacje.pl
                 </a>
               </p>
               <p>🕐 Pon–Pt: 08:00–18:00</p>
