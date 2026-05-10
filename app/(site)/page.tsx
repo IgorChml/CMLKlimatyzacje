@@ -1,16 +1,20 @@
 import type { Metadata } from 'next'
 import HeroSection from '@/components/HeroSection'
 import ServiceCard from '@/components/ServiceCard'
+import StepsSection from '@/components/StepsSection'
+import WhyUsSection from '@/components/WhyUsSection'
+import BrandsSection from '@/components/BrandsSection'
 import FaqAccordion from '@/components/FaqAccordion'
 import LocalSeoText from '@/components/LocalSeoText'
 import ReviewsSection from '@/components/ReviewsSection'
 import { fetchGoogleReviews } from '@/lib/google-reviews'
+import { Wind, Wrench, Sprout, Building2 } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'CML Klimatyzacje – Montaż, Serwis i Pompy Ciepła | Luboń, Poznań',
   description:
-    'Profesjonalny montaż i serwis klimatyzacji oraz pomp ciepła w Luboniu, Poznaniu i okolicach Wielkopolski. Szybka wycena, certyfikowani monterzy, 5 lat gwarancji.',
+    'Profesjonalny montaż i serwis klimatyzacji oraz pomp ciepła w Luboniu, Poznaniu i okolicach Wielkopolski. Szybka wycena, certyfikowani monterzy, 3 lata gwarancji.',
   openGraph: {
     title: 'CML Klimatyzacje – Montaż, Serwis i Pompy Ciepła',
     description:
@@ -31,44 +35,36 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: '❄️',
-    title: 'Klimatyzacja',
-    description:
-      'Sprzedaż i dobór urządzeń klimatyzacyjnych renomowanych marek. Pomożemy wybrać optymalne rozwiązanie dla Twojego domu lub biura.',
-    href: '/klimatyzacja',
-    features: ['Daikin, Mitsubishi, Fujitsu', 'Klimatyzatory ścienne i kasetonowe', 'Systemy multi-split'],
-  },
-  {
-    icon: '🔧',
+    icon: <Wind className="w-10 h-10 text-sky" strokeWidth={1.5} />,
     title: 'Montaż klimatyzacji',
     description:
-      'Profesjonalny montaż klimatyzacji przez certyfikowanych techników. Instalacja w ciągu jednego dnia roboczego.',
+      'Profesjonalny montaż klimatyzacji przez certyfikowanych techników F-GAZ. Instalacja nawet w ciągu jednego dnia roboczego.',
     href: '/montaz-klimatyzacji',
-    features: ['Montaż w 1 dzień', 'Certyfikowani monterzy', 'Gwarancja instalacji'],
+    features: ['Montaż w 1 dzień', 'Certyfikowani monterzy F-GAZ', 'Gwarancja instalacji'],
   },
   {
-    icon: '🛠️',
+    icon: <Wrench className="w-10 h-10 text-sky" strokeWidth={1.5} />,
     title: 'Serwis klimatyzacji',
     description:
-      'Przeglądy, naprawy i czyszczenie klimatyzatorów. Utrzymaj sprawność urządzenia na lata.',
+      'Przeglądy, naprawy i czyszczenie klimatyzatorów. Utrzymaj sprawność urządzenia przez lata.',
     href: '/serwis-klimatyzacji',
     features: ['Przeglądy roczne', 'Naprawy awarii', 'Uzupełnianie czynnika'],
   },
   {
-    icon: '🧼',
-    title: 'Odgrzybianie',
+    icon: <Sprout className="w-10 h-10 text-sky" strokeWidth={1.5} />,
+    title: 'Odgrzybianie klimatyzacji',
     description:
-      'Profesjonalne odgrzybianie i dezynfekcja klimatyzatorów. Zadbaj o zdrowe powietrze w domu.',
+      'Profesjonalne odgrzybianie i dezynfekcja klimatyzatorów. Zdrowe powietrze w Twoim domu i biurze.',
     href: '/odgrzybianie-klimatyzacji',
-    features: ['Dezynfekcja UV', 'Czyszczenie filtrów', 'Likwidacja pleśni i grzybów'],
+    features: ['Dezynfekcja biobójcza', 'Czyszczenie filtrów', 'Likwidacja pleśni i grzybów'],
   },
   {
-    icon: '🌡️',
-    title: 'Pompy ciepła',
+    icon: <Building2 className="w-10 h-10 text-sky" strokeWidth={1.5} />,
+    title: 'Klimatyzacja do biur',
     description:
-      'Instalacja i serwis pomp ciepła powietrze-woda. Ekologiczne ogrzewanie z dofinansowaniem.',
-    href: '/pompy-ciepla',
-    features: ['Dofinansowanie Czyste Powietrze', 'Montaż i uruchomienie', 'Gwarancja fabryczna'],
+      'Kompleksowe rozwiązania klimatyzacyjne dla firm, biur, restauracji i obiektów komercyjnych.',
+    href: '/oferta',
+    features: ['Systemy multi-split', 'Klimatyzatory kasetonowe', 'Umowy serwisowe'],
   },
 ]
 
@@ -91,7 +87,7 @@ const faqs = [
   {
     question: 'Jak często należy serwisować klimatyzację?',
     answer:
-      'Zalecamy przegląd co najmniej raz w roku – najlepiej przed sezonem letnim. Regularny serwis zapewnia wydajność urządzenia, dobry jakość powietrza i nie traci ważności gwarancji.',
+      'Zalecamy przegląd co najmniej raz w roku – najlepiej przed sezonem letnim. Regularny serwis zapewnia wydajność urządzenia, dobrą jakość powietrza i nie traci ważności gwarancji.',
   },
   {
     question: 'Czy oferujecie finansowanie zakupu klimatyzacji?',
@@ -102,24 +98,29 @@ const faqs = [
 
 export default async function HomePage() {
   const reviews = await fetchGoogleReviews()
+
   return (
     <>
+      {/* 1. Hero */}
       <HeroSection
-        badge="Nr 1 w Luboniu i okolicach"
-        title="Klimatyzacja i pompy ciepła dla Twojego domu"
-        subtitle="Profesjonalny montaż, serwis i odgrzybianie klimatyzacji. Obsługujemy Luboń, Poznań i całą Wielkopolskę. Szybka wycena – odpowiadamy w ciągu 24h."
-        primaryCta={{ label: 'Zadzwoń: 691 959 013', href: 'tel:691959013' }}
-        secondaryCta={{ label: 'Sprawdź ofertę', href: '/oferta' }}
+        badge="Luboń, Poznań i Wielkopolska"
+        title="Komfortowa temperatura w Twoim domu w 48h. Montaż i serwis klimatyzacji"
+        subtitle="Certyfikowani technicy F-GAZ, 3 lata gwarancji, bezpłatna wycena. Obsługujemy Luboń, Poznań i okolice."
+        primaryCta={{ label: 'Poproś o darmową wycenę', href: '/kontakt' }}
+        secondaryCta={{ label: 'Zobacz ofertę', href: '/oferta' }}
       />
 
-      {/* Services section */}
+      {/* 2. 3 kroki */}
+      <StepsSection />
+
+      {/* 3. Services */}
       <section className="py-16 bg-gray-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-title text-center">Nasze usługi</h2>
           <p className="section-subtitle text-center mx-auto">
-            Kompleksowa obsługa klimatyzacji i pomp ciepła – od doboru urządzenia, przez montaż, po regularne serwisowanie.
+            Kompleksowa obsługa klimatyzacji – od montażu, przez serwis, po odgrzybianie i rozwiązania dla firm.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s) => (
               <ServiceCard key={s.href} {...s} />
             ))}
@@ -127,28 +128,13 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Why us */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-title text-center">Dlaczego warto nam zaufać?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-            {[
-              { icon: '🏆', title: '10+ lat doświadczenia', desc: 'Setki zrealizowanych instalacji w całej Wielkopolsce.' },
-              { icon: '🎓', title: 'Certyfikowani technicy', desc: 'Posiadamy certyfikaty F-GAZ i uprawnienia do obsługi czynników chłodniczych.' },
-              { icon: '⚡', title: 'Szybka realizacja', desc: 'Montaż najczęściej w ciągu 1-3 dni roboczych od zamówienia.' },
-              { icon: '🛡️', title: '5 lat gwarancji', desc: 'Gwarancja obejmuje zarówno urządzenie, jak i wykonaną instalację.' },
-            ].map((item) => (
-              <div key={item.title} className="card text-center">
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-navy text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 4. Brands */}
+      <BrandsSection />
 
-      {/* CTA banner */}
+      {/* 5. Why us */}
+      <WhyUsSection />
+
+      {/* 6. CTA banner */}
       <section className="bg-navy text-white py-14">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Gotowy na komfort przez cały rok?</h2>
@@ -156,19 +142,29 @@ export default async function HomePage() {
             Zadzwoń do nas lub napisz – bezpłatna wycena montażu klimatyzacji w ciągu 24h.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:691959013" className="btn-primary">
+            <a
+              href="tel:691959013"
+              className="btn-primary min-h-[44px]"
+            >
               📞 Zadzwoń teraz
             </a>
-            <Link href="/kontakt" className="btn-outline border-white text-white hover:bg-white hover:text-navy">
+            <Link
+              href="/kontakt"
+              className="btn-outline border-white text-white hover:bg-white hover:text-navy min-h-[44px]"
+            >
               Napisz do nas
             </Link>
           </div>
         </div>
       </section>
 
+      {/* 7. Google Reviews */}
       {reviews && <ReviewsSection data={reviews} />}
 
+      {/* 8. FAQ */}
       <FaqAccordion items={faqs} />
+
+      {/* 9. Local SEO */}
       <LocalSeoText />
     </>
   )

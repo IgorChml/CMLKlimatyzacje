@@ -1,7 +1,8 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 interface ServiceCardProps {
-  icon: string
+  icon: ReactNode
   title: string
   description: string
   href: string
@@ -11,7 +12,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ icon, title, description, href, features }: ServiceCardProps) {
   return (
     <article className="card group hover:-translate-y-1 flex flex-col h-full">
-      <div className="text-4xl mb-4">{icon}</div>
+      <div className="mb-4 text-4xl flex items-center">{icon}</div>
       <h3 className="text-xl font-bold text-navy mb-2 group-hover:text-sky transition-colors duration-300">
         {title}
       </h3>
@@ -26,9 +27,10 @@ export default function ServiceCard({ icon, title, description, href, features }
           ))}
         </ul>
       )}
+      {/* TODO: use .webp format when adding real photos */}
       <Link
         href={href}
-        className="mt-auto inline-flex items-center gap-1 text-sky font-semibold text-sm hover:text-orange transition-colors duration-300"
+        className="mt-auto inline-flex items-center gap-1 text-sky font-semibold text-sm hover:text-orange transition-colors duration-300 min-h-[44px]"
       >
         Dowiedz się więcej →
       </Link>

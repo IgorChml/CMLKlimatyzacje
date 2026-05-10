@@ -38,12 +38,18 @@ export default function HeroSection({
           </p>
           <div className="flex flex-wrap gap-4">
             {primaryCta && (
-              <Link href={primaryCta.href} className="btn-primary">
+              <Link
+                href={primaryCta.href}
+                className="btn-primary min-h-[44px] min-w-[44px]"
+              >
                 {primaryCta.label}
               </Link>
             )}
             {secondaryCta && (
-              <Link href={secondaryCta.href} className="btn-outline border-white text-white hover:bg-white hover:text-navy">
+              <Link
+                href={secondaryCta.href}
+                className="btn-outline border-white text-white hover:bg-white hover:text-navy min-h-[44px] min-w-[44px]"
+              >
                 {secondaryCta.label}
               </Link>
             )}
@@ -55,15 +61,15 @@ export default function HeroSection({
           {[
             { icon: '✅', text: 'Certyfikowani monterzy' },
             { icon: '⚡', text: 'Montaż w 1 dzień' },
-            { icon: '🛡️', text: '5 lat gwarancji' },
+            { icon: '🛡️', text: '3 lata gwarancji' },
             { icon: '📍', text: 'Luboń i okolice' },
-          ].map((badge) => (
+          ].map((item) => (
             <div
-              key={badge.text}
+              key={item.text}
               className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-xl text-sm font-medium"
             >
-              <span>{badge.icon}</span>
-              <span>{badge.text}</span>
+              <span>{item.icon}</span>
+              <span>{item.text}</span>
             </div>
           ))}
         </div>
