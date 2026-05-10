@@ -3,6 +3,8 @@ import HeroSection from '@/components/HeroSection'
 import ServiceCard from '@/components/ServiceCard'
 import FaqAccordion from '@/components/FaqAccordion'
 import LocalSeoText from '@/components/LocalSeoText'
+import ReviewsSection from '@/components/ReviewsSection'
+import { fetchGoogleReviews } from '@/lib/google-reviews'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -98,7 +100,8 @@ const faqs = [
   },
 ]
 
-export default function HomePage() {
+export default async function HomePage() {
+  const reviews = await fetchGoogleReviews()
   return (
     <>
       <HeroSection
@@ -162,6 +165,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {reviews && <ReviewsSection data={reviews} />}
 
       <FaqAccordion items={faqs} />
       <LocalSeoText />
